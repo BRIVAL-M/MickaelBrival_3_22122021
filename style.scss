@@ -90,7 +90,8 @@ display: -webkit-box;
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
-  	width:150px;
+  	/*width:150px;*/
+      width: 100%;
 }
 html {
     overflow-x : hidden;
@@ -846,7 +847,7 @@ footer ul {
 .menu__btn { /*faire une mixin pour all button !*/
     display: flex;
     /*width: 100%;*/
-    height: 60px; /*peut etre pas besoin de hauteur...*/
+    height: 65px; /*peut etre pas besoin de hauteur...*/
     border-radius: 15px;
 
     margin-top: 10px;
@@ -864,43 +865,55 @@ footer ul {
 }
 
 .menu__descrip {
-    @include overflowContent;
-    @include overflowing;
-    /*display: block;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    text-align: start;*/
-    padding: 10px;
+    display: flex;
     width: 100%;
-    /*height: 42px;*/
-  
 
-    h4 {
+    p {
        
+           
+        margin: inherit;
+    }
+
+   
+   
+  
+    h4 {
+        
+        @include overflowing;
+        
         margin-top: 0px;
         margin-bottom: 5px;
     }
-    .menu__descrip:hover{
-        .menu__price--valid {
-            width: 62px;
-            opacity: 1;
+    &--entitled{
+        @include overflowContent;
+        
+        width: 100%;
+        padding: 10px;
+        p{
+            @include overflowing;
         }
+       
+
+       
+       
     }
   
-  
-  /* span {  A voir pour les 3 petits points...
-        font-size: 1.1em;
-    }*/
-    
-  
 }
+.menu__descrip:hover .menu__price--valid{
+    opacity: 1;
+        width: 120px;
+        margin-left: 10px;
+}
+
+
 .menu__price {
-    @include ajustItem;
+   display: flex;
+   align-items: flex-end;
    
     font-size: large;
     font-weight: bold;
     margin-top: 0px;
+    padding-bottom: 9px;
    
     }
     
@@ -910,11 +923,14 @@ footer ul {
     border-radius: 0px 15px 15px 0px;
     color: white;
     opacity: 0;
+    .fas{
+        font-size: x-large;
+    }
+    
+    
 }
-.menu__price--valid:hover{
-    opacity: 1;
-        width: 62px;
-}
+
+
 
 
 

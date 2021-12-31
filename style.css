@@ -1008,7 +1008,7 @@ footer ul {
   display: -ms-flexbox;
   display: flex;
   /*width: 100%;*/
-  height: 60px;
+  height: 65px;
   /*peut etre pas besoin de hauteur...*/
   border-radius: 15px;
   margin-top: 10px;
@@ -1035,53 +1035,64 @@ footer ul {
 }
 
 .menu__descrip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.menu__descrip p {
+  margin: inherit;
+}
+
+.menu__descrip h4 {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /*width:150px;*/
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.menu__descrip--entitled {
   /* je voudrai mettre une scroll bar horizontale pour pouvoir lire le texte*/
   overflow: hidden;
   width: 100px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  width: 100%;
+  padding: 10px;
+}
+
+.menu__descrip--entitled p {
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 150px;
-  /*display: block;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    text-align: start;*/
-  padding: 10px;
+  /*width:150px;*/
   width: 100%;
-  /*height: 42px;*/
-  /* span {  A voir pour les 3 petits points...
-        font-size: 1.1em;
-    }*/
 }
 
-.menu__descrip h4 {
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-
-.menu__descrip .menu__descrip:hover .menu__price--valid {
-  width: 62px;
+.menu__descrip:hover .menu__price--valid {
   opacity: 1;
+  width: 120px;
+  margin-left: 10px;
 }
 
 .menu__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-size: large;
   font-weight: bold;
   margin-top: 0px;
+  padding-bottom: 9px;
 }
 
 .menu__price--valid {
@@ -1100,9 +1111,8 @@ footer ul {
   opacity: 0;
 }
 
-.menu__price--valid:hover {
-  opacity: 1;
-  width: 62px;
+.menu__price--valid .fas {
+  font-size: x-large;
 }
 
 .order {
