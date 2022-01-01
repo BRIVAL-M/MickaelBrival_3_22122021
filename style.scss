@@ -36,8 +36,13 @@ align-items: center;
 }
 
 @mixin trans {
-    transform: scale(1.02);
+   
     transition: all 0.2s;
+   
+   
+}
+@mixin transHover {
+    transform: scale(1.02);
 }
 @mixin restoImg {
     width: 100%;
@@ -215,6 +220,7 @@ li {
 
     &__btn {
         @include button;
+        @include trans;
         @media screen and (min-width: 768px) {
             margin-top: 57px;
             
@@ -225,7 +231,7 @@ li {
      
 }
 .discovery__btn:hover {
-    @include trans;
+    @include transHover;
     background-image: linear-gradient(0.01turn, $color-primary, $color-secondary);
     cursor: pointer;
 
@@ -289,6 +295,7 @@ li {
    
     .tutorial__button {
         @include ajustItem;
+        @include trans;
         background-color: $generalBg;
         justify-content: inherit;
         height: 65px;
@@ -311,7 +318,7 @@ li {
         }
 
         &:hover{ 
-            @include trans;
+            @include transHover;
             @include bgButton;
             margin-left: 40px;
             cursor: pointer;
@@ -614,7 +621,7 @@ footer ul {
        
     }
     .footer__elem--links {
-      
+        @include trans;
         color: white;
         margin-bottom: 10px;
         @media screen and (min-width: 1290px) {
@@ -623,7 +630,7 @@ footer ul {
         }
     }
     .footer__elem--links:hover{ /*A nester!!! */
-        @include trans;
+        @include transHover;
         color: #f000b4;
         .footer__icons {
             color: $color-primary;
@@ -698,7 +705,7 @@ footer ul {
         -webkit-transition: -webkit-transform 400ms;
         transition: -webkit-transform 400ms;
         transition: transform 400ms;
-        transition: transform 400ms, -webkit-transform 400ms;
+        transition: transform 400ms, -webkit-transform 400ms;/*ici                         00000000000000000000000000000000000000000000*/
         
     }
     .header2__nav--link2:hover{
@@ -719,9 +726,17 @@ footer ul {
     border-radius: 100%;
     margin-left: 10px;
     color: black;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
+    transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
     &:hover{
         color: white;
         background-color: $color-primary;
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
         
     }
 }
@@ -845,6 +860,7 @@ footer ul {
 }
 
 .menu__btn { /*faire une mixin pour all button !*/
+    @include trans;
     display: flex;
     /*width: 100%;*/
     height: 65px; /*peut etre pas besoin de hauteur...*/
@@ -853,11 +869,12 @@ footer ul {
     margin-top: 10px;
     /*padding: 10px;                                             A revoir mettre le padding dans descript...*/
     box-shadow: 0 0 16px #0000002e;
+    
     @media screen and (min-width: 1290px){
         margin-bottom: 35px;
     }
     &:hover {
-        @include trans;
+        @include transHover;
     }
     &--margin {
         margin-bottom: 40px;
@@ -899,10 +916,19 @@ footer ul {
     }
   
 }
+.menu__descrip:hover {
+    cursor: pointer;
+}
 .menu__descrip:hover .menu__price--valid{
     opacity: 1;
         width: 120px;
         margin-left: 10px;
+        background-color: $color-tertiary;
+        .fas {
+            animation: rotateIcon 0.5s ease;
+        }
+        
+        
 }
 
 
@@ -919,12 +945,22 @@ footer ul {
     
 .menu__price--valid {
     @include ajustItem;
-    background-color: $color-tertiary;
+   background-color: white;
     border-radius: 0px 15px 15px 0px;
     color: white;
     opacity: 0;
+    width: 5%;
+    transition: all 1s cubic-bezier(.18,.89,.32,1.28);
     .fas{
         font-size: x-large;
+        @keyframes rotateIcon {
+          0% {
+              transform: rotate(-270deg);
+          }
+          100% {
+              transform: rotate(0);
+          }
+        }
     }
     
     
@@ -943,10 +979,13 @@ footer ul {
 
  &__btn {
     @include button;
+    @include trans;
+   
     width: 210px;
    
     &:hover{
-        @include trans;
+        @include transHover;
+         /*mettre les transitions sur l'element! donc revoir la mixin*/
         background-image: linear-gradient(0.01turn, $color-primary, $color-secondary);
         cursor: pointer;
     }

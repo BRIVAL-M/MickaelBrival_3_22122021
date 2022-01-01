@@ -201,6 +201,8 @@ li {
   padding-inline: 20px;
   border: none;
   border-radius: 40px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @media screen and (min-width: 768px) {
@@ -212,8 +214,6 @@ li {
 .discovery .discovery__btn:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   background-image: linear-gradient(0.01turn, #9356DC, #FF79DA);
   cursor: pointer;
 }
@@ -311,6 +311,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   background-color: #F6F6F6;
   -webkit-box-pack: inherit;
       -ms-flex-pack: inherit;
@@ -337,8 +339,6 @@ li {
 .tutorial__button:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   background-color: #9356DC;
   background-color: #f2eafb;
   margin-left: 40px;
@@ -713,6 +713,8 @@ footer ul {
 }
 
 .footer .footer__elem--links {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   color: white;
   margin-bottom: 10px;
 }
@@ -728,8 +730,6 @@ footer ul {
   /*A nester!!! */
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   color: #f000b4;
 }
 
@@ -828,6 +828,7 @@ footer ul {
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
+  /*ici                         00000000000000000000000000000000000000000000*/
 }
 
 .header2__nav .header2__nav--link2:hover {
@@ -851,11 +852,19 @@ footer ul {
   border-radius: 100%;
   margin-left: 10px;
   color: black;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
 }
 
 .header2__nav--arrow:hover {
   color: white;
   background-color: #9356DC;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 /*.BACK::before {
@@ -1004,6 +1013,8 @@ footer ul {
 
 .menu__btn {
   /*faire une mixin pour all button !*/
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1026,8 +1037,6 @@ footer ul {
 .menu__btn:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 .menu__btn--margin {
@@ -1076,10 +1085,20 @@ footer ul {
   width: 100%;
 }
 
+.menu__descrip:hover {
+  cursor: pointer;
+}
+
 .menu__descrip:hover .menu__price--valid {
   opacity: 1;
   width: 120px;
   margin-left: 10px;
+  background-color: #99E2D0;
+}
+
+.menu__descrip:hover .menu__price--valid .fas {
+  -webkit-animation: rotateIcon 0.5s ease;
+          animation: rotateIcon 0.5s ease;
 }
 
 .menu__price {
@@ -1105,14 +1124,39 @@ footer ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #99E2D0;
+  background-color: white;
   border-radius: 0px 15px 15px 0px;
   color: white;
   opacity: 0;
+  width: 5%;
+  -webkit-transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .menu__price--valid .fas {
   font-size: x-large;
+}
+
+@-webkit-keyframes rotateIcon {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
 }
 
 .order {
@@ -1141,14 +1185,15 @@ footer ul {
   padding-inline: 20px;
   border: none;
   border-radius: 40px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   width: 210px;
 }
 
 .order__btn:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  /*mettre les transitions sur l'element! donc revoir la mixin*/
   background-image: linear-gradient(0.01turn, #9356DC, #FF79DA);
   cursor: pointer;
 }
