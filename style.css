@@ -589,45 +589,6 @@ figcaption h3 {
   transform: scale(1.15);
 }
 
-/*.info {                                W3C DON'T LIKE THIS ONE unhappily :/
-    position: relative; 
-}
-.info:hover::after, 
-.info:focus::after {
-  content: attr(aria-label) ;  
-  position: absolute;
-  top: -3.2em;
-  left: 15%;
-  transform: translateX(-8%); 
-  z-index: 1; 
-  white-space: nowrap;
-  font-style: italic;
-  color: white;
-  background-color: #f000b4;
-  border-radius: 20px;  
-  padding: 8px;
-  display: none;
-  @media screen and (min-width: 1245px){
-      display: initial;
-  }
-}
-[aria-label]:hover:before,
-[aria-label]:focus:before {
-    content: "▼";
-    position: absolute;
-    top: -1.2em;
-    left: 30%;
-    transform: translateX(-50%); 
-    font-size: 20px;
-    color: #f000b4;
-    display: none;
-    @media screen and (min-width: 1245px){
-        display: initial;
-    }
-}
-[aria-label]:focus {
-  outline: none;
-}*/
 .restaurant__cards--links {
   width: 100%;
   display: -webkit-box;
@@ -828,7 +789,6 @@ footer ul {
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
-  /*ici                         00000000000000000000000000000000000000000000*/
 }
 
 .header2__nav .header2__nav--link2:hover {
@@ -867,12 +827,6 @@ footer ul {
   transform: scale(1.15);
 }
 
-/*.BACK::before {
-    position: absolute;
-    content: "Accueil";
-    left: 40px;
-    font-family: "roboto" , sans-serif;
-}                                                           Mon icone disparait quand je l'active o.O" dommage :(*/
 .menu {
   background-color: #F6F6F6;
   position: relative;
@@ -980,6 +934,8 @@ footer ul {
 .menu__title {
   font-family: 'Shrikhand' , sans-serif;
   font-size: 28px;
+  -webkit-transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 @media screen and (max-width: 330px) {
@@ -1003,12 +959,118 @@ footer ul {
   height: 3px;
   background-color: #99E2D0;
   margin-bottom: 15px;
+  -webkit-animation: BORDER-EVENT 400ms cubic-bezier(0.4, 0, 0.2, 1);
+          animation: BORDER-EVENT 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
 }
 
 @media screen and (min-width: 1290px) {
   .menu__underTitle--border {
     margin-bottom: 40px;
   }
+}
+
+@-webkit-keyframes BORDER-EVENT {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes BORDER-EVENT {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes MENU-EVENT {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes MENU-EVENT {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu__btn:nth-child(1) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.menu__btn:nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu__btn:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu__btn:nth-child(4) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.menu__btn:nth-child(5) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.menu__btn:nth-child(6) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.menu__btn:nth-child(7) {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.menu__btn:nth-child(8) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.menu__btn:nth-child(9) {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.menu__btn:nth-child(10) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 .menu__btn {
@@ -1026,6 +1088,10 @@ footer ul {
   /*padding: 10px;                                             A revoir mettre le padding dans descript...*/
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
+  -webkit-animation: MENU-EVENT 1s;
+          animation: MENU-EVENT 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 @media screen and (min-width: 1290px) {
@@ -1097,8 +1163,8 @@ footer ul {
 }
 
 .menu__descrip:hover .menu__price--valid .fas {
-  -webkit-animation: rotateIcon 0.5s ease;
-          animation: rotateIcon 0.5s ease;
+  -webkit-animation: ROTATE-ICON 0.5s ease;
+          animation: ROTATE-ICON 0.5s ease;
 }
 
 .menu__price {
@@ -1137,7 +1203,7 @@ footer ul {
   font-size: x-large;
 }
 
-@-webkit-keyframes rotateIcon {
+@-webkit-keyframes ROTATE-ICON {
   0% {
     -webkit-transform: rotate(-270deg);
             transform: rotate(-270deg);
@@ -1148,7 +1214,7 @@ footer ul {
   }
 }
 
-@keyframes rotateIcon {
+@keyframes ROTATE-ICON {
   0% {
     -webkit-transform: rotate(-270deg);
             transform: rotate(-270deg);

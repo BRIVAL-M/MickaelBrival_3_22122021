@@ -525,45 +525,7 @@ transition: transform 400ms, -webkit-transform 400ms;
     transform: scale(1.15);
 }
 
-/*.info {                                W3C DON'T LIKE THIS ONE unhappily :/
-    position: relative; 
-}
-.info:hover::after, 
-.info:focus::after {
-  content: attr(aria-label) ;  
-  position: absolute;
-  top: -3.2em;
-  left: 15%;
-  transform: translateX(-8%); 
-  z-index: 1; 
-  white-space: nowrap;
-  font-style: italic;
-  color: white;
-  background-color: #f000b4;
-  border-radius: 20px;  
-  padding: 8px;
-  display: none;
-  @media screen and (min-width: 1245px){
-      display: initial;
-  }
-}
-[aria-label]:hover:before,
-[aria-label]:focus:before {
-    content: "▼";
-    position: absolute;
-    top: -1.2em;
-    left: 30%;
-    transform: translateX(-50%); 
-    font-size: 20px;
-    color: #f000b4;
-    display: none;
-    @media screen and (min-width: 1245px){
-        display: initial;
-    }
-}
-[aria-label]:focus {
-  outline: none;
-}*/
+
 .restaurant__cards--links {
     width: 100%;
     display: flex;
@@ -705,7 +667,7 @@ footer ul {
         -webkit-transition: -webkit-transform 400ms;
         transition: -webkit-transform 400ms;
         transition: transform 400ms;
-        transition: transform 400ms, -webkit-transform 400ms;/*ici                         00000000000000000000000000000000000000000000*/
+        transition: transform 400ms, -webkit-transform 400ms;
         
     }
     .header2__nav--link2:hover{
@@ -740,12 +702,7 @@ footer ul {
         
     }
 }
-/*.BACK::before {
-    position: absolute;
-    content: "Accueil";
-    left: 40px;
-    font-family: "roboto" , sans-serif;
-}                                                           Mon icone disparait quand je l'active o.O" dommage :(*/
+
 
 .menu {
     background-color: $generalBg;
@@ -831,20 +788,20 @@ footer ul {
   
      
     }
-    .menu__title {
+    .menu__title { 
         
         font-family : 'Shrikhand' , sans-serif; 
         font-size: 28px;
+       
+        transition: all 1s cubic-bezier(.18,.89,.32,1.28);
         @media screen and (max-width: 330px){
             font-size: 22px;
         }
         @media screen and (min-width: 768px) {
             margin-right: 30px;
         }
-        
-
-      
 }
+
 
   .menu__underTitle {
     margin-bottom: 3px;
@@ -853,11 +810,38 @@ footer ul {
         height: 3px;
         background-color: $color-tertiary;
         margin-bottom: 15px;
+        animation: BORDER-EVENT 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        animation-delay: 400ms;
+        animation-fill-mode: backwards;
+        transform-origin: 0% ;
+        
+         
         @media screen and (min-width: 1290px){
             margin-bottom: 40px;
         }
     }
 }
+@keyframes BORDER-EVENT {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+@keyframes MENU-EVENT {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.menu__btn {
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}){
+          animation-delay: 100ms * $i;
+      }
+    }
+    }
 
 .menu__btn { /*faire une mixin pour all button !*/
     @include trans;
@@ -865,11 +849,11 @@ footer ul {
     /*width: 100%;*/
     height: 65px; /*peut etre pas besoin de hauteur...*/
     border-radius: 15px;
-
     margin-top: 10px;
     /*padding: 10px;                                             A revoir mettre le padding dans descript...*/
     box-shadow: 0 0 16px #0000002e;
-    
+    animation: MENU-EVENT 1s ; 
+    animation-fill-mode: backwards;
     @media screen and (min-width: 1290px){
         margin-bottom: 35px;
     }
@@ -925,7 +909,7 @@ footer ul {
         margin-left: 10px;
         background-color: $color-tertiary;
         .fas {
-            animation: rotateIcon 0.5s ease;
+            animation: ROTATE-ICON 0.5s ease;
         }
         
         
@@ -953,7 +937,7 @@ footer ul {
     transition: all 1s cubic-bezier(.18,.89,.32,1.28);
     .fas{
         font-size: x-large;
-        @keyframes rotateIcon {
+        @keyframes ROTATE-ICON  {
           0% {
               transform: rotate(-270deg);
           }
@@ -993,4 +977,6 @@ footer ul {
 }
 
 }
+
+
 
