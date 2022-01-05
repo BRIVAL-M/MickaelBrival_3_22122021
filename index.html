@@ -1,14 +1,3 @@
-<!--choses faites : rectification "margin" sur les boutons du tuto au hover pour ne pas que le texte wrap en mobile view
-
-                    ajout d'un mailto à "contact"
-                    j'ai réglé l'histoire du responsive entre 400 et 768px
-                    Coeur + hover
-                    modification du BG général en F6F6F6...
-    
-    
- 
--  -->
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -34,22 +23,16 @@
         <h1 class="location__descript"><i class="location__icon fas fa-map-marker-alt"></i>Paris, Belleville</h1>
     </section>
     <div class="container1">
-        <!-- Start container (for desktop adjustment) -->
         <section class="discovery">
             <h2>Réservez le menu qui<br>vous convient</h2>
             <p class="discovery__descript">Découvrez des restaurants d'exception,<br>sélectionnés par nos soins.</p>
             <button class="discovery__btn">Explorer nos restaurants</button>
         </section>
-        <!-- <video class="background" autoplay loop muted>
-            <source src="images/diner.mp4" type="video/mp4">
-        </video>-->
         <section class="tutorial">
             <h2>Fonctionnement</h2>
             <ol>
-             
                 <li class="tutorial__elem">
                     <span class="tutorial__step">1</span>
-                   
                     <div class="tutorial__button">
                         <div class="tutorial__icons"><i class="fas fa-mobile-alt"></i></div>Choisissez un restaurant
                     </div>
@@ -68,40 +51,34 @@
                 </li>
             </ol>
         </section>
-    </div><!-- End container (for desktop adjustment) -->
-
-
+    </div><!-- End container1 (for desktop adjustment) -->
     <section class="restaurant">
-        <div class="restaurant__title"><!--For title Restaurants in desktop view-->
+        <div class="restaurant__title">
+            <!--For title Restaurants in desktop view-->
             <h2>Restaurants</h2>
-        </div> 
+        </div>
         <div class="container">
             <!-- Start container (for desktop adjustment) -->
-            <a href="menu_la_palette_du_gout.html" class="restaurant__cards--links NEW_CONTENT" title="Cliquez pour choisir ce restaurant !">
-                <figure class="restaurant__cards"><!--I used a <figure> because initially my images were in the htlm-->
+            <a href="menu_la_palette_du_gout.html" class="restaurant__cards--links NEW_CONTENT"
+                title="Cliquez pour choisir ce restaurant !">
+                <figure class="restaurant__cards">
+                    <!--I used a <figure> because initially my images were in the htlm-->
                     <div class="restaurant__img1"></div>
-                  
-                    <!-- I wanted to make my own info bubble but W3C doesn't like it unhappily :( 
-                        <figcaption><div class="restoCards__descript">     
-            <span class="info" aria-label="Je choisis ce restaurant !"><h3>La palette du goût</h3>Ménilmontant</div></span>
-                <div class="restoCards__heart info" aria-label="J'adore ❤"><i class="far fa-heart"></i></div></figcaption>-->
                     <figcaption>
                         <h3>La palette du goût</h3>Ménilmontant
-                        
-                            <i class="far fa-heart restaurant__heart--1"></i>
-                            <i class="fas fa-heart restaurant__heart--2"></i>
-                      
+                        <i class="far fa-heart restaurant__heart--1"></i>
+                        <i class="fas fa-heart restaurant__heart--2"></i>
                     </figcaption>
                 </figure>
             </a>
             <a href="menu_la_note_enchantee.html" class="restaurant__cards--links NEW_CONTENT"
                 title="Cliquez pour choisir ce restaurant !">
-                <figure class="restaurant__cards"><div class="restaurant__img2"></div>
+                <figure class="restaurant__cards">
+                    <div class="restaurant__img2"></div>
                     <figcaption>
                         <h3>La note enchantée</h3>Charonne
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
-                    
                     </figcaption>
                 </figure>
             </a>
@@ -109,23 +86,25 @@
         <!-- End container (for desktop adjustment) -->
         <div class="container">
             <!-- Start container (for desktop adjustment) -->
-            <a href="menu_a_la_francaise.html" class="restaurant__cards--links" title="Cliquez pour choisir ce restaurant !">
-                <figure class="restaurant__cards"><div class="restaurant__img3"></div>
+            <a href="menu_a_la_francaise.html" class="restaurant__cards--links"
+                title="Cliquez pour choisir ce restaurant !">
+                <figure class="restaurant__cards">
+                    <div class="restaurant__img3"></div>
                     <figcaption>
-                      <h3>À la française</h3>Cité Rouge
+                        <h3>À la française</h3>Cité Rouge
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
-                  
                     </figcaption>
                 </figure>
             </a>
-            <a href="menu_le_delice_des_sens.html" class="restaurant__cards--links" title="Cliquez pour choisir ce restaurant !">
-                <figure class="restaurant__cards"><div class="restaurant__img4"></div>
+            <a href="menu_le_delice_des_sens.html" class="restaurant__cards--links"
+                title="Cliquez pour choisir ce restaurant !">
+                <figure class="restaurant__cards">
+                    <div class="restaurant__img4"></div>
                     <figcaption>
                         <h3>Le délice des sens</h3>Folie-Méricourt
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
-                   
                     </figcaption>
                 </figure>
             </a>
@@ -133,7 +112,6 @@
         <!-- End container (for desktop adjustment) -->
     </section>
     <footer class="footer">
-        <!--<img src="images/logo/ohmyfood@2x.svg" class="footer__logo" alt="logo ohmyfood"> revoir le h2 du coup o.O"-->
         <h2 class="footer__title">ohmyfood</h2>
         <ul class="footer__elem">
             <li class="footer__elem--links">
@@ -146,8 +124,8 @@
         <ul class="footer__elem">
             <li class="footer__elem--links"><a href="#">Mentions légales</a></li>
             <li class="footer__elem--links"><a href="mailto:ohmyfood-contact@gmail.com">Contact</a></li>
-            
         </ul>
     </footer>
 </body>
+
 </html>
