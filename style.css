@@ -17,6 +17,101 @@
     background-color: $color-tertiary;
     background-color: lighten($color: $color-tertiary, $amount: 21);
 }*/
+.loading__screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background-color: whitesmoke;
+  height: 100vh;
+  -webkit-animation: SCREEN-EVENT 0s 3s;
+          animation: SCREEN-EVENT 0s 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loading__screen h3 {
+  font-family: "Shrikhand",sans-serif;
+}
+
+@-webkit-keyframes SCREEN-EVENT {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes SCREEN-EVENT {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.loading__screen--anim {
+  background-image: linear-gradient(225deg, #9c27b0 0%, #9356dc 29%, #ff79da 67%, #99e2d000 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /*-webkit-text-fill-color: transparent;
+  text-fill-color: transparent;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: LOADING-EVENT 1.5s cubic-bezier(0.4, 0, 1, 1) infinite;
+          animation: LOADING-EVENT 1.5s cubic-bezier(0.4, 0, 1, 1) infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: x-large;
+  /*font-size: xx-Large;*/
+  /*pour la vue mobile 375px :p */
+  /*font-size: 5rem;*/
+  /*pour la vue desktop 768px :p */
+}
+
+@media screen and (min-width: 374px) {
+  .loading__screen--anim {
+    font-size: xx-large;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .loading__screen--anim {
+    font-size: 5rem;
+  }
+}
+
+.loading__screen--anim .fas {
+  margin-right: 15px;
+}
+
+@-webkit-keyframes LOADING-EVENT {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes LOADING-EVENT {
+  to {
+    background-position: -200% center;
+  }
+}
+
 html {
   overflow-x: hidden;
   /*cursor: url("images/logo/cursor.png") 4 12, auto;*/

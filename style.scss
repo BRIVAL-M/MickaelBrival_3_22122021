@@ -87,6 +87,74 @@ $generalBg: #f6f6f6; /*Général Background*/
   /*width:150px;*/
   width: 100%;
 }
+
+.loading__screen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background-color: whitesmoke;
+  height: 100vh;
+	
+	animation: SCREEN-EVENT 0s 3s ;
+  animation-fill-mode: forwards;
+  h3 {
+    font-family: "Shrikhand",sans-serif;
+  }
+}
+
+@keyframes SCREEN-EVENT {
+  from{
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+	.loading__screen--anim
+{
+ 
+  background-image: linear-gradient(225deg, #9c27b0 0%, #9356dc 29%, #ff79da 67%, #99e2d000  100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /*-webkit-text-fill-color: transparent;
+  text-fill-color: transparent;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: LOADING-EVENT  1.5s cubic-bezier(0.4, 0, 1, 1) infinite;
+  
+  
+  
+  animation-fill-mode: forwards;
+ font-size: x-large;
+ @media screen and (min-width: 374px) {
+   font-size: xx-large;
+ }
+ @media screen and (min-width: 768px) {
+  font-size: 5rem;
+ }
+ .fas {
+	margin-right: 15px;
+}
+  /*font-size: xx-Large;*/ /*pour la vue mobile 375px :p */
+
+   /*font-size: 5rem;*/ /*pour la vue desktop 768px :p */
+
+}
+
+@keyframes LOADING-EVENT {
+
+  to {
+    background-position: -200% center;
+
+    }
+}
 html {
   overflow-x: hidden;
   /*cursor: url("images/logo/cursor.png") 4 12, auto;*/
@@ -694,7 +762,7 @@ footer ul {
     height: 3px;
     background-color: $color-tertiary;
     margin-bottom: 15px;
-    animation: BORDER-EVENT 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: BORDER-EVENT 400ms  cubic-bezier(0.4, 0, 0.2, 1);
     animation-delay: 400ms;
     animation-fill-mode: backwards;
     transform-origin: 0%;
@@ -707,6 +775,7 @@ footer ul {
 @keyframes BORDER-EVENT {
   from {
     transform: scaleX(0);
+   
   }
   to {
     transform: scaleX(1);
@@ -716,6 +785,7 @@ footer ul {
   from {
     transform: translateY(50%);
     opacity: 0;
+    
   }
   to {
     transform: translateY(0);
@@ -725,7 +795,7 @@ footer ul {
 .menu__btn {
   @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
-      animation-delay: 100ms * $i;
+     animation-delay: 100ms * $i;
     }
   }
 }
