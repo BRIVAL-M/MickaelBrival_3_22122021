@@ -1,0 +1,35 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin-inline: 0px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+ul {
+  padding: inherit;
+}
+ol {
+  padding-inline-start: 0px;
+}
+
+li {
+  @extend %adjustItem;
+  list-style: none;
+  justify-content: start;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+footer ul {
+  margin: inherit;
+}
+
+
+
+

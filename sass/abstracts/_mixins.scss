@@ -1,0 +1,60 @@
+/*general "transform" of the buttons/links*/
+@mixin trans {
+  transition: all 0.2s;
+}
+
+@mixin transHover {
+  transform: scale(1.02);
+}
+/*_______________________________________*/
+
+@mixin button {
+  margin-top: 15px;
+  height: 50px;
+  background-image: linear-gradient(0.99turn, $color-primary, $color-secondary);
+  box-shadow: 1.5px 5px 10px 2px lightgrey;
+  color: white;
+  font-size: larger;
+  padding-inline: 20px;
+  border: none;
+  border-radius: 40px;
+}
+
+@mixin restoImg {
+  width: 100%;
+  height: 155px;
+  border-radius: 15px 15px 0px 0px;
+  background-size: cover;
+}
+
+@mixin titleAdjust {
+  margin-top: 105px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+@mixin heart {
+  position: absolute;
+  font-size: x-large;
+  bottom: 15px;
+  right: 20px;
+}
+
+/*for menu descriptions*/
+
+@mixin overflowContent {
+  overflow: hidden;
+  width: 100px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@mixin overflowing {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+

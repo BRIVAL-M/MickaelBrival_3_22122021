@@ -1,0 +1,55 @@
+.footer {
+  background-color: $footerBg;
+  height: 200px;
+  @media screen and (min-width: 1290px) {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__elem {
+    margin-left: 25px;
+    @media screen and (min-width: 1290px) {
+      display: flex;
+    }
+  }
+  .footer__elem--links {
+    @include trans;
+    color: white;
+    margin-bottom: 10px;
+    @media screen and (min-width: 1290px) {
+      margin-bottom: 0px;
+      margin-inline: 65px;
+    }
+  }
+  .footer__elem--links:hover {
+    @include transHover;
+    color: #f000b4;
+    .footer__icons {
+      color: $color-primary;
+    }
+  }
+  .footer__icons {
+    width: 25px;
+  }
+  .footer__title {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    font-size: xx-large;
+    color: white;
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: bold;
+    margin: 0px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    @media screen and (min-width: 1290px) {
+      /* @extend %adjustItem; ne passe pas à cause du @media :/*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: inherit;
+      margin-bottom: inherit;
+    }
+  }
+}

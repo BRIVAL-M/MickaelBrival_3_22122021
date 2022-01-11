@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2b58de1911.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sass/style.css">
     <title>Ohmyfood</title>
 </head>
 
@@ -21,10 +21,17 @@
     <div class="loading__screen">
         <h3 class="loading__screen--anim"><i class="fas fa-utensils"></i>Oh Ça Charge...</h3>
     </div>
-    <header class="header"><img src="images/logo/ohmyfood@2x.svg" class="header__logo" alt="logo ohmyfood"></header>
-    <section class="location">
+    <header class="header">
+    <img src="images/logo/ohmyfood@2x.svg" class="header__logo" alt="logo ohmyfood"></header>
+    <!--<section class="location">
         <h1 class="location__descript"><i class="location__icon fas fa-map-marker-alt"></i>Paris, Belleville</h1>
-    </section>
+    </section>-->
+    <div class="location"><!--I put a div because my section had no title...-->
+        <form class="location__position">
+        <i class="fas fa-map-marker-alt"></i>
+       <input  type="search" placeholder="Paris, Belleville">
+    </form>
+    </div>
     <div class="container1">
         <section class="discovery">
             <h2>Réservez le menu qui<br>vous convient</h2>
@@ -127,7 +134,14 @@
         <ul class="footer__elem">
             <li class="footer__elem--links"><a href="#">Mentions légales</a></li>
             <li class="footer__elem--links"><a href="mailto:ohmyfood-contact@gmail.com">Contact</a></li>
+            <li class="footer__elem--links W3C"> <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrival-m.github.io%2FMickaelBrival_3_22122021%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="CSS Valide !" />
+            </a></li>
         </ul>
+       
+  
     </footer>
 </body>
 

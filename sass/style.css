@@ -1,22 +1,155 @@
 @charset "UTF-8";
-/*            LISTE DES CHOSES A FAIRE
-
-
-- Peut-être faire un point break pour ajuster le rendu en 280px...
-
-- Il y a des choses a nester
-- Voir pour l'organisation des dossiers 7-1
-- Faire une boucle pour les images des cartes resto...
-
-- Test de mettre des hovers dans les mixins !
-
-
- */
+/*COLOURS OF THE CHARTER*/
 /*Général Background*/
-/*@mixin bg {
-    background-color: $color-tertiary;
-    background-color: lighten($color: $color-tertiary, $amount: 21);
-}*/
+/*Footer Background*/
+/*general "transform" of the buttons/links*/
+/*_______________________________________*/
+/*for menu descriptions*/
+/*general placement of items*/
+li, .header, .header2__nav--arrow, .location, .discovery h2, .tutorial, .tutorial__elem .tutorial__step, .tutorial__button, .NEW_CONTENT::before, .menu__price--valid, .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*For hover of tutorial button*/
+/*For the "NOUVEAU" label*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin-inline: 0px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+ul {
+  padding: inherit;
+}
+
+ol {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+li {
+  list-style: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+footer ul {
+  margin: inherit;
+}
+
+@-webkit-keyframes LOADING-EVENT {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes LOADING-EVENT {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@-webkit-keyframes NEW_CONTENT {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes NEW_CONTENT {
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes BORDER-EVENT {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes BORDER-EVENT {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes MENU-EVENT {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes MENU-EVENT {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes ROTATE-ICON {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes ROTATE-ICON {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
 .loading__screen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,10 +169,11 @@
           animation: SCREEN-EVENT 0s 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  font-family: "Shrikhand", sans-serif;
 }
 
-.loading__screen h3 {
-  font-family: "Shrikhand",sans-serif;
+.fa-utensils {
+  margin-right: 15px;
 }
 
 @-webkit-keyframes SCREEN-EVENT {
@@ -69,8 +203,6 @@
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  /*-webkit-text-fill-color: transparent;
-  text-fill-color: transparent;*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: LOADING-EVENT 1.5s cubic-bezier(0.4, 0, 1, 1) infinite;
@@ -78,10 +210,6 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   font-size: x-large;
-  /*font-size: xx-Large;*/
-  /*pour la vue mobile 375px :p */
-  /*font-size: 5rem;*/
-  /*pour la vue desktop 768px :p */
 }
 
 @media screen and (min-width: 374px) {
@@ -96,58 +224,8 @@
   }
 }
 
-.loading__screen--anim .fas {
-  margin-right: 15px;
-}
-
-@-webkit-keyframes LOADING-EVENT {
-  to {
-    background-position: -200% center;
-  }
-}
-
-@keyframes LOADING-EVENT {
-  to {
-    background-position: -200% center;
-  }
-}
-
-html {
-  overflow-x: hidden;
-  /*cursor: url("images/logo/cursor.png") 4 12, auto;*/
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin-inline: 0px;
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(#ff79da), to(#9356dc));
-  background: linear-gradient(transparent, #ff79da, #9356dc);
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #9356dc;
-}
-
+/*header of the main page "index"*/
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
   width: 100%;
   -webkit-box-shadow: 0px 2px 2px 1px lightgrey;
@@ -155,10 +233,8 @@ body {
 }
 
 .header__logo {
-  height: 40%;
   width: 50%;
   padding-bottom: 10px;
-  /* pour le moment...*/
 }
 
 @media screen and (min-width: 768px) {
@@ -167,61 +243,251 @@ body {
   }
 }
 
-/*.background {  (vidéo)
-    display: none;
-    @media screen and (min-width: 1245px){
-      display: initial;
-      height: 295px;
-    object-fit: cover;
-      margin-top: 105px;
-    }
-}*/
-ul {
-  padding: inherit;
-}
-
-ol {
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
-}
-
-li {
+/*header of the restaurants pages*/
+.header2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header2__bg {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .header2__bg {
+    height: 500px;
+  }
+}
+
+.header2__nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header2__nav--link1 {
+  width: 15%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
 }
 
+.header2__nav--link2 {
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.header2__nav .header2__nav--link2:hover {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.header2__nav--arrow {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin-left: 10px;
+  color: black;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.header2__nav--arrow:hover {
+  color: white;
+  background-color: #9356dc;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.footer {
+  background-color: #353535;
+  height: 200px;
+}
+
+@media screen and (min-width: 1290px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer .footer__elem {
+  margin-left: 25px;
+}
+
+@media screen and (min-width: 1290px) {
+  .footer .footer__elem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer .footer__elem--links {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: white;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1290px) {
+  .footer .footer__elem--links {
+    margin-bottom: 0px;
+    margin-inline: 65px;
+  }
+}
+
+.footer .footer__elem--links:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  color: #f000b4;
+}
+
+.footer .footer__elem--links:hover .footer__icons {
+  color: #9356dc;
+}
+
+.footer .footer__icons {
+  width: 25px;
+}
+
+.footer .footer__title {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: xx-large;
+  color: white;
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: bold;
+  margin: 0px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 1290px) {
+  .footer .footer__title {
+    /* @extend %adjustItem; ne passe pas à cause du @media :/*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: inherit;
+    margin-bottom: inherit;
+  }
+}
+
 .location {
+  background-color: #dfddddb3;
+}
+
+/* (old code without input...)
+.location__descript {
+  font-weight: bold;
+  margin-right: 30px;
+}
+.location__icon {
+  margin-right: 15px;
+}*/
+input {
+  border: none;
+  font-size: large;
+  text-align: center;
+  -webkit-margin-before: 0.83em;
+          margin-block-start: 0.83em;
+  -webkit-margin-after: 0.83em;
+          margin-block-end: 0.83em;
+  background-color: #dfdddd00;
+  margin-left: 20px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+input:focus,
+input:hover {
+  color: white;
+  background-image: linear-gradient(0.99turn, #9356dc, #ff79da);
+  -webkit-box-shadow: 1.5px 5px 10px 2px lightgrey;
+          box-shadow: 1.5px 5px 10px 2px lightgrey;
+}
+
+.fa-map-marker-alt {
+  position: absolute;
+  content: "";
+  top: 38%;
+  left: 15%;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.location__position {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #dfddddb3;
+  position: relative;
 }
 
-.location__descript {
-  font-weight: bold;
-  margin-right: 30px;
-  /*peut etre revoir la font size*/
-}
-
-.location__icon {
-  margin-right: 15px;
+.location__position:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .discovery {
@@ -240,18 +506,11 @@ li {
 
 @media screen and (min-width: 1245px) {
   .discovery {
-    /*peut etre le retirer vu qu'il n'y a plus la vidéo*/
     width: 30%;
   }
 }
 
 .discovery h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -261,15 +520,6 @@ li {
 
 @media screen and (min-width: 768px) {
   .discovery h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     text-align: center;
     height: inherit;
     margin: initial;
@@ -281,7 +531,6 @@ li {
   margin-top: 15px;
   height: 50px;
   background-image: linear-gradient(0.99turn, #9356dc, #ff79da);
-  /*voir si on peut mettre les hovers direct dedans O.O!!!!!!!!*/
   -webkit-box-shadow: 1.5px 5px 10px 2px lightgrey;
           box-shadow: 1.5px 5px 10px 2px lightgrey;
   color: white;
@@ -314,15 +563,6 @@ li {
 }
 
 .tutorial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -372,15 +612,6 @@ li {
 }
 
 .tutorial__elem .tutorial__step {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -390,15 +621,6 @@ li {
 }
 
 .tutorial__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background-color: #f6f6f6;
@@ -471,7 +693,6 @@ li {
   width: 100%;
   margin-bottom: 30px;
   background-color: white;
-  /*                                                                                           voir pour faire une boucle avec toutes les images !*/
 }
 
 .restaurant__cards:hover {
@@ -496,7 +717,7 @@ li {
   height: 155px;
   border-radius: 15px 15px 0px 0px;
   background-size: cover;
-  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
 @media screen and (min-width: 768px) {
@@ -516,7 +737,7 @@ li {
   height: 155px;
   border-radius: 15px 15px 0px 0px;
   background-size: cover;
-  background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 
 @media screen and (min-width: 768px) {
@@ -536,7 +757,7 @@ li {
   height: 155px;
   border-radius: 15px 15px 0px 0px;
   background-size: cover;
-  background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-position: bottom;
 }
 
@@ -557,7 +778,7 @@ li {
   height: 155px;
   border-radius: 15px 15px 0px 0px;
   background-size: cover;
-  background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-position: bottom;
 }
 
@@ -578,39 +799,18 @@ li {
 }
 
 .NEW_CONTENT::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #99e2d0;
+  color: #278870;
   content: "Nouveau";
   position: absolute;
   top: 30px;
   right: 15px;
   width: 100px;
   height: 35px;
-  background-color: #99e2d0;
-  color: #278870;
   font-weight: bold;
   border-radius: 2px;
   -webkit-animation: NEW_CONTENT 2.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
           animation: NEW_CONTENT 2.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
-}
-
-@-webkit-keyframes NEW_CONTENT {
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes NEW_CONTENT {
-  50% {
-    opacity: 0;
-  }
 }
 
 figcaption {
@@ -699,207 +899,9 @@ figcaption h3 {
 }
 
 @media (min-width: 768px) {
-  .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
   .container .restaurant__cards--links {
     width: 35%;
   }
-}
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-footer ul {
-  margin: inherit;
-}
-
-.footer {
-  background-color: #353535;
-  height: 200px;
-}
-
-@media screen and (min-width: 1290px) {
-  .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.footer .footer__elem {
-  margin-left: 25px;
-}
-
-@media screen and (min-width: 1290px) {
-  .footer .footer__elem {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.footer .footer__elem--links {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  color: white;
-  margin-bottom: 10px;
-}
-
-@media screen and (min-width: 1290px) {
-  .footer .footer__elem--links {
-    margin-bottom: 0px;
-    margin-inline: 65px;
-  }
-}
-
-.footer .footer__elem--links:hover {
-  /*A nester!!! */
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  color: #f000b4;
-}
-
-.footer .footer__elem--links:hover .footer__icons {
-  color: #9356dc;
-}
-
-.footer .footer__icons {
-  width: 25px;
-}
-
-.footer .footer__title {
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  font-size: xx-large;
-  color: white;
-  font-family: "Shrikhand";
-  font-style: italic;
-  font-weight: bold;
-  margin: 0px;
-  margin-left: 25px;
-  margin-bottom: 25px;
-}
-
-@media screen and (min-width: 1290px) {
-  .footer .footer__title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: inherit;
-    margin-bottom: inherit;
-  }
-}
-
-/*____________________________________________________________________________________________________________________________*\
-                                                                                         MENU
-                                                                                      RESTAURANT
-                            \* ___________________________________________________________________________________________________________________________*/
-.header2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.header2__bg {
-  width: 100%;
-  height: 270px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (min-width: 768px) {
-  .header2__bg {
-    height: 500px;
-  }
-}
-
-.header2__nav {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.header2__nav--link1 {
-  width: 15%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.header2__nav--link2 {
-  width: 70%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
-}
-
-.header2__nav .header2__nav--link2:hover {
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
-}
-
-.header2__nav--arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  margin-left: 10px;
-  color: black;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
-}
-
-.header2__nav--arrow:hover {
-  color: white;
-  background-color: #9356dc;
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
 }
 
 .menu {
@@ -1050,54 +1052,6 @@ footer ul {
   }
 }
 
-@-webkit-keyframes BORDER-EVENT {
-  from {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes BORDER-EVENT {
-  from {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@-webkit-keyframes MENU-EVENT {
-  from {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes MENU-EVENT {
-  from {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .menu__btn:nth-child(1) {
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
@@ -1196,14 +1150,12 @@ footer ul {
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /*width:150px;*/
   width: 100%;
   margin-top: 0px;
   margin-bottom: 5px;
 }
 
 .menu__descrip--entitled {
-  /* je voudrai mettre une scroll bar horizontale pour pouvoir lire le texte*/
   overflow: hidden;
   width: 100px;
   display: -webkit-box;
@@ -1218,7 +1170,6 @@ footer ul {
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /*width:150px;*/
   width: 100%;
 }
 
@@ -1252,15 +1203,6 @@ footer ul {
 }
 
 .menu__price--valid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: white;
   border-radius: 0px 15px 15px 0px;
   color: white;
@@ -1274,38 +1216,7 @@ footer ul {
   font-size: x-large;
 }
 
-@-webkit-keyframes ROTATE-ICON {
-  0% {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@keyframes ROTATE-ICON {
-  0% {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
 .order {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 120px;
   width: 100%;
 }
@@ -1314,7 +1225,6 @@ footer ul {
   margin-top: 15px;
   height: 50px;
   background-image: linear-gradient(0.99turn, #9356dc, #ff79da);
-  /*voir si on peut mettre les hovers direct dedans O.O!!!!!!!!*/
   -webkit-box-shadow: 1.5px 5px 10px 2px lightgrey;
           box-shadow: 1.5px 5px 10px 2px lightgrey;
   color: white;
@@ -1332,5 +1242,32 @@ footer ul {
           transform: scale(1.02);
   background-image: linear-gradient(0.01turn, #9356dc, #ff79da);
   cursor: pointer;
+}
+
+/*I'm not ashamed of them but I don't know where to put them*/
+/*scroll bar customization*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(#ff79da), to(#9356dc));
+  background: linear-gradient(transparent, #ff79da, #9356dc);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #9356dc;
+}
+
+/*W3C validator css logo*/
+.W3C {
+  display: none;
+}
+
+@media screen and (min-width: 1506px) {
+  .W3C {
+    display: initial;
+  }
 }
 /*# sourceMappingURL=style.css.map */

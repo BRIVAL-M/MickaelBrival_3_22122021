@@ -1,0 +1,11 @@
+/*For hover of tutorial button*/
+@mixin bgButton {
+  background-color: $color-primary;
+  background-color: lighten($color: $color-primary, $amount: 35);
+}
+
+/*For the "NOUVEAU" label*/
+@mixin new {
+  background-color: $color-tertiary;
+  color: darken($color: $color-tertiary, $amount: 40);
+}
