@@ -2,40 +2,47 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="images/favIcon/favicon-32x32.png" sizes="32x32" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2b58de1911.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/style.css" />
     <title>Ohmyfood</title>
 </head>
 
 <body>
     <div class="loading__screen">
-        <h3 class="loading__screen--anim"><i class="fas fa-utensils"></i>Oh Ça Charge...</h3>
+        <h3 class="loading__screen--anim">
+            <i class="fas fa-utensils"></i>Oh Ça Charge...
+        </h3>
     </div>
     <header class="header">
-    <img src="images/logo/ohmyfood@2x.svg" class="header__logo" alt="logo ohmyfood"></header>
+        <img src="images/logo/ohmyfood@2x.svg" class="header__logo" alt="logo ohmyfood"/>
+    </header>
     <!--<section class="location">
         <h1 class="location__descript"><i class="location__icon fas fa-map-marker-alt"></i>Paris, Belleville</h1>
     </section>-->
-    <div class="location"><!--I put a div because my section had no title...-->
+    <div class="location">
+        <!--I put a div because my section had no title...-->
         <form class="location__position">
-        <i class="fas fa-map-marker-alt"></i>
-       <input  type="search" placeholder="Paris, Belleville">
-    </form>
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="search" placeholder="Paris, Belleville"/>
+        </form>
     </div>
     <div class="container1">
         <section class="discovery">
-            <h2>Réservez le menu qui<br>vous convient</h2>
-            <p class="discovery__descript">Découvrez des restaurants d'exception,<br>sélectionnés par nos soins.</p>
+            <h2>Réservez le menu qui<br />vous convient</h2>
+            <p class="discovery__descript">
+                Découvrez des restaurants d'exception,<br />sélectionnés par nos
+                soins.
+            </p>
             <button class="discovery__btn">Explorer nos restaurants</button>
         </section>
         <section class="tutorial">
@@ -44,24 +51,30 @@
                 <li class="tutorial__elem">
                     <span class="tutorial__step">1</span>
                     <div class="tutorial__button">
-                        <div class="tutorial__icons"><i class="fas fa-mobile-alt"></i></div>Choisissez un restaurant
+                        <div class="tutorial__icons">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        Choisissez un restaurant
                     </div>
                 </li>
                 <li class="tutorial__elem">
                     <span class="tutorial__step">2</span>
                     <div class="tutorial__button">
-                        <div class="tutorial__icons"><i class="fas fa-list-ul"></i></div>Composez votre menu
+                        <div class="tutorial__icons"><i class="fas fa-list-ul"></i></div>
+                        Composez votre menu
                     </div>
                 </li>
                 <li class="tutorial__elem">
                     <span class="tutorial__step">3</span>
                     <div class="tutorial__button">
-                        <div class="tutorial__icons"><i class="fas fa-store"></i></div>Dégustez au restaurant
+                        <div class="tutorial__icons"><i class="fas fa-store"></i></div>
+                        Dégustez au restaurant
                     </div>
                 </li>
             </ol>
         </section>
-    </div><!-- End container1 (for desktop adjustment) -->
+    </div>
+    <!-- End container1 (for desktop adjustment) -->
     <section class="restaurant">
         <div class="restaurant__title">
             <!--For title Restaurants in desktop view-->
@@ -75,7 +88,8 @@
                     <!--I used a <figure> because initially my images were in the htlm-->
                     <div class="restaurant__img1"></div>
                     <figcaption>
-                        <h3>La palette du goût</h3>Ménilmontant
+                        <h3>La palette du goût</h3>
+                        Ménilmontant
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
                     </figcaption>
@@ -86,7 +100,8 @@
                 <figure class="restaurant__cards">
                     <div class="restaurant__img2"></div>
                     <figcaption>
-                        <h3>La note enchantée</h3>Charonne
+                        <h3>La note enchantée</h3>
+                        Charonne
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
                     </figcaption>
@@ -101,7 +116,8 @@
                 <figure class="restaurant__cards">
                     <div class="restaurant__img3"></div>
                     <figcaption>
-                        <h3>À la française</h3>Cité Rouge
+                        <h3>À la française</h3>
+                        Cité Rouge
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
                     </figcaption>
@@ -112,7 +128,8 @@
                 <figure class="restaurant__cards">
                     <div class="restaurant__img4"></div>
                     <figcaption>
-                        <h3>Le délice des sens</h3>Folie-Méricourt
+                        <h3>Le délice des sens</h3>
+                        Folie-Méricourt
                         <i class="far fa-heart restaurant__heart--1"></i>
                         <i class="fas fa-heart restaurant__heart--2"></i>
                     </figcaption>
@@ -125,23 +142,27 @@
         <h2 class="footer__title">ohmyfood</h2>
         <ul class="footer__elem">
             <li class="footer__elem--links">
-                <div class="footer__icons"><i class="fas fa-utensils"></i></div><a href="#">Proposer un restaurant</a>
+                <div class="footer__icons"><i class="fas fa-utensils"></i></div>
+                <a href="#">Proposer un restaurant</a>
             </li>
             <li class="footer__elem--links">
-                <div class="footer__icons"><i class="fas fa-hands-helping"></i></div><a href="#">Devenir partenaire</a>
+                <div class="footer__icons"><i class="fas fa-hands-helping"></i></div>
+                <a href="#">Devenir partenaire</a>
             </li>
         </ul>
         <ul class="footer__elem">
             <li class="footer__elem--links"><a href="#">Mentions légales</a></li>
-            <li class="footer__elem--links"><a href="mailto:ohmyfood-contact@gmail.com">Contact</a></li>
-            <li class="footer__elem--links W3C"> <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrival-m.github.io%2FMickaelBrival_3_22122021%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr">
-                <img style="border:0;width:88px;height:31px"
-                    src="https://jigsaw.w3.org/css-validator/images/vcss"
-                    alt="CSS Valide !" />
-            </a></li>
+            <li class="footer__elem--links">
+                <a href="mailto:ohmyfood-contact@gmail.com">Contact</a>
+            </li>
+            <li class="footer__elem--links W3C">
+                <a
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrival-m.github.io%2FMickaelBrival_3_22122021%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr">
+                    <img style="border: 0; width: 88px; height: 31px"
+                        src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+                </a>
+            </li>
         </ul>
-       
-  
     </footer>
 </body>
 
