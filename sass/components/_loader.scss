@@ -36,13 +36,12 @@
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: LOADING-EVENT 1.5s cubic-bezier(0.4, 0, 1, 1) infinite;
-
   animation-fill-mode: forwards;
   font-size: x-large;
+
   @media screen and (min-width: 374px) {
     font-size: xx-large;
   }

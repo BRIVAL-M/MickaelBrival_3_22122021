@@ -25,6 +25,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -39,6 +40,7 @@
     top: 29px;
     font-size: x-large;
     right: 15px;
+
     @media screen and (max-width: 330px) {
       top: 20px;
       right: 0px;
@@ -56,6 +58,7 @@
     transition: -webkit-transform 400ms;
     transition: transform 400ms;
     transition: transform 400ms, -webkit-transform 400ms;
+
     @media screen and (max-width: 330px) {
       top: 20px;
       right: 0px;
@@ -78,8 +81,8 @@
 .menu__title {
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
-
   transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
   @media screen and (max-width: 330px) {
     font-size: 22px;
   }
@@ -123,6 +126,7 @@
   box-shadow: 0 0 16px #0000002e;
   animation: MENU-EVENT 1s;
   animation-fill-mode: backwards;
+  
   @media screen and (min-width: 1290px) {
     margin-bottom: 35px;
   }

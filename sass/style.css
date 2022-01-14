@@ -703,16 +703,19 @@ input:hover {
   width: 100%;
   margin-bottom: 30px;
   background-color: white;
-}
-
-.restaurant__cards:hover {
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
 }
 
 @media screen and (min-width: 768px) {
   .restaurant__cards {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     height: 295px;
+  }
+  .restaurant__cards:hover {
+    -webkit-box-shadow: 0 0 16px #0000002e;
+            box-shadow: 0 0 16px #0000002e;
   }
 }
 
@@ -1280,4 +1283,6 @@ figcaption h3 {
     display: initial;
   }
 }
+
+/*mettre les ombres sur les cartes en vue mobile*/
 /*# sourceMappingURL=style.css.map */
