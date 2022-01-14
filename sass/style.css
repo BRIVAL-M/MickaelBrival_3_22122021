@@ -561,6 +561,8 @@ input:hover {
 .discovery .discovery__btn:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+  -webkit-box-shadow: 1.5px 5px 10px 2px #979797;
+          box-shadow: 1.5px 5px 10px 2px #979797;
   background-image: linear-gradient(0.01turn, #9356dc, #ff79da);
   cursor: pointer;
 }
@@ -1253,6 +1255,8 @@ figcaption h3 {
 .order__btn:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+  -webkit-box-shadow: 1.5px 5px 10px 2px #979797;
+          box-shadow: 1.5px 5px 10px 2px #979797;
   background-image: linear-gradient(0.01turn, #9356dc, #ff79da);
   cursor: pointer;
 }

@@ -209,6 +209,7 @@
 
     &:hover {
       @include transHover;
+      box-shadow: 1.5px 5px 10px 2px #979797;
       background-image: linear-gradient(
         0.01turn,
         $color-primary,
