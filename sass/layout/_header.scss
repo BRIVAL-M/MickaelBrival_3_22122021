@@ -36,10 +36,12 @@
   display: inline-flex;
   width: 100%;
   margin-bottom: 20px;
+
   &--link1 {
     width: 15%;
     justify-content: start;
   }
+  
   &--link2 {
     width: 70%;
     justify-content: center;
@@ -50,6 +52,7 @@
     transition: transform 400ms;
     transition: transform 400ms, -webkit-transform 400ms;
   }
+
   .header2__nav--link2:hover {
     -webkit-transform: scale(1.15);
     transform: scale(1.15);
@@ -69,6 +72,7 @@
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
+
   &:hover {
     color: white;
     background-color: $color-primary;

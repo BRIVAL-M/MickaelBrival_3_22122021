@@ -45,6 +45,7 @@ input:hover {
   display: flex;
   justify-content: center;
   position: relative;
+
   &:hover {
     @include transHover;
   }
@@ -63,11 +64,13 @@ input:hover {
   @media screen and (min-width: 1245px) {
     width: 30%;
   }
+
   h2 {
     @extend %adjustItem;
     align-items: flex-end;
     height: 100px;
     margin: 0px;
+
     @media screen and (min-width: 768px) {
       text-align: center;
       height: inherit;
@@ -79,6 +82,7 @@ input:hover {
   &__btn {
     @include button;
     @include trans;
+
     @media screen and (min-width: 768px) {
       margin-top: 57px;
     }
@@ -123,6 +127,7 @@ input:hover {
     margin-top: 50px;
     margin-left: 15px;
     width: inherit;
+
     @media screen and (min-width: 768px) {
       text-align: center;
       margin-left: inherit;
@@ -185,12 +190,15 @@ input:hover {
 .restaurant {
   background-color: $generalBg;
   padding-inline: 20px;
+
   h2 {
     padding-top: 20px;
   }
+
   @media (min-width: 475px) {
     padding-inline: 10px;
   }
+
   @media screen and (min-width: 768px) {
     padding-inline: inherit;
     &__title {
@@ -290,6 +298,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+  
   h3 {
     margin-bottom: 10px;
   }

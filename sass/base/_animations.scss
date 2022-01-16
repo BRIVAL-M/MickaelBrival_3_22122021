@@ -1,3 +1,12 @@
+@keyframes SCREEN-EVENT {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 @keyframes LOADING-EVENT {
   to {
     background-position: -200% center;

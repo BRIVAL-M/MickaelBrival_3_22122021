@@ -66,6 +66,26 @@ footer ul {
   margin: inherit;
 }
 
+@-webkit-keyframes SCREEN-EVENT {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes SCREEN-EVENT {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 @-webkit-keyframes LOADING-EVENT {
   to {
     background-position: -200% center;
@@ -184,26 +204,6 @@ footer ul {
 
 .fa-utensils {
   margin-right: 15px;
-}
-
-@-webkit-keyframes SCREEN-EVENT {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes SCREEN-EVENT {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    z-index: -1;
-  }
 }
 
 .loading__screen--anim {
@@ -1287,6 +1287,4 @@ figcaption h3 {
     display: initial;
   }
 }
-
-/*mettre les ombres sur les cartes en vue mobile*/
 /*# sourceMappingURL=style.css.map */

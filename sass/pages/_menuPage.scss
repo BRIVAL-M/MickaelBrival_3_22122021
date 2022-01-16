@@ -4,6 +4,7 @@
   border-radius: 35px 35px 0px 0px;
   margin-top: -55px;
   padding: 10px;
+  
   &__bloc {
     padding-inline: 5px;
     margin-bottom: 40px;
@@ -15,6 +16,7 @@
     justify-content: space-around;
     margin-top: -29px;
     height: 721px;
+
     &__bloc {
       width: 30%;
     }
@@ -148,23 +150,25 @@
 
   h4 {
     @include overflowing;
-
     margin-top: 0px;
     margin-bottom: 5px;
   }
+
   &--entitled {
     @include overflowContent;
-
     width: 100%;
     padding: 10px;
+
     p {
       @include overflowing;
     }
   }
 }
+
 .menu__descrip:hover {
   cursor: pointer;
 }
+
 .menu__descrip:hover .menu__price--valid {
   opacity: 1;
   width: 120px;
